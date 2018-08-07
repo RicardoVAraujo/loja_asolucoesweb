@@ -18,10 +18,8 @@ class Controller{
     private function getController(){
         if(!$this->uri->emptyUri()):
             $explodeUri = array_filter(explode('/', $this->uri->getUri()));
-
             return ucfirst($explodeUri[1]).'Controller';
-        endif; 
-        
+        endif;         
         return ucfirst(DEFAULT_CONTROLLER).'Controller';
     }
 
